@@ -8,10 +8,11 @@ const { exec } = require ('child_process');
 exec ('grep Succeeded /var/log/syslog | wc -l', (err, stdout, stderr)
 {
 	if(err) 
+         //some err occurred
 	{
 		console.error(err)
 	} else {
-		
+		//the stdout stderr (buffered)
 		console.log('stdout: ${stdout}');
 		console.log('stderr: ${stderr}');
 		
@@ -20,17 +21,17 @@ exec ('grep Succeeded /var/log/syslog | wc -l', (err, stdout, stderr)
 });
 
 //configure the request
-var option = {
-	url: grep Succeeded /var/log/syslog | wc -l,
-	method : 'GET'
+//var option = {
+//	url: grep Succeeded /var/log/syslog | wc -l,
+//	method : 'GET'
 	
-}
+//}
 
 // Start the request
-request(options, fuction (error, response, body) {
-		if (!error && response.statusCode == 200){
-			app.get ('/', (req, res) => {
-				res.send('test' + body);
-			});
-		}
-})
+//request(options, fuction (error, response, body) {
+//		if (!error && response.statusCode == 200){
+//			app.get ('/', (req, res) => {
+//				res.send('test' + body);
+//			});
+//		}
+//})
